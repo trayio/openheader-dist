@@ -1,8 +1,12 @@
 # openheader-dist — retired
 
-**This repository is archived and read-only.** It was OpenHeader's self-hosted enterprise
+**This repository no longer distributes anything.** It was OpenHeader's self-hosted enterprise
 distribution channel: a signed CRX3 plus an `update.xml`, served from the [`dist`](../../tree/dist)
 branch.
+
+It is kept public, and **not archived**, for one live purpose: it hosts OpenHeader's published
+[privacy policy](PRIVACY.md) — see below. Do not archive or delete this repository without moving
+that first.
 
 ## Where OpenHeader lives now
 
@@ -11,6 +15,23 @@ branch.
   the store's Verified CRX Uploads by `.github/workflows/cws.yml` in the source repo.
 - **Forcelist value** (Google Admin / Jamf `ExtensionInstallForcelist`):
   `mmlgckcbednmilajhfjaihamacppnalj;https://clients2.google.com/service/update2/crx`
+
+## What this repository still serves
+
+[`PRIVACY.md`](PRIVACY.md) is OpenHeader's published privacy policy. The Chrome Web Store listing
+points at its raw URL, so it must stay publicly readable by anyone, signed in or not:
+
+    https://raw.githubusercontent.com/trayio/openheader-dist/main/PRIVACY.md
+
+It lives here because the policy has to be reachable anonymously by a store reviewer, and
+`trayio/openheader` is private — the org disables public GitHub Pages
+(`members_can_create_public_pages: false`), so it cannot publish one itself.
+
+**This copy is a mirror. Do not edit it here.** The source of truth is `PRIVACY.md` in
+[trayio/openheader](https://github.com/trayio/openheader), where it sits next to the code it
+describes and is reviewed in the same pull request as any change to what the extension stores,
+sends, or reads. That repo's CI fetches the URL above on every run and fails if the two have
+drifted, so an edit made here alone will break its build rather than quietly diverge.
 
 ## Why it was retired
 
