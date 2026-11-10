@@ -47,3 +47,14 @@ item). The fleet was re-forcelisted onto the new id and the old entry removed.
 
 The `dist` branch is left as it was, for history: it still holds `openheader-0.1.{1,2,3}.crx` and the
 final `update.xml` (last publish 0.1.3, 2026-07-10). Nothing consumes it.
+
+## Tray Org Switcher's privacy policy
+
+[`tray-org-switcher/PRIVACY.md`](tray-org-switcher/PRIVACY.md) is the published privacy policy of
+Tray Org Switcher, for the same reason: its source repo, `trayio/tray-org-switcher`, is private, and
+the Chrome Web Store listing needs a URL anyone can read:
+
+    https://raw.githubusercontent.com/trayio/openheader-dist/main/tray-org-switcher/PRIVACY.md
+
+It is also a mirror. The source of truth is `PRIVACY.md` in `trayio/tray-org-switcher`, whose CI
+fails if the two drift. Do not move or delete this file without updating that listing first.
